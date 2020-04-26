@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- Uncompressed jQuery -->
+    >
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/996973c893.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- My Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+<script src="covid.js"></script>
+
+
+    <!-- Chart.js (Working CDN) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+
+    <title>Covid-19 Tracker India</title>
+  </head>
+  <body>
+
+    <!-- Main Title and  Sub-heading -->
+    <div class="container-fluid bg-light p-5 text-center my-3">
+      <h1 class="">COVID-19</h1>
+      <h3 class="text-muted">
+        A project which helps you to know about corona panidemic.
+      </h3>
+
+       <img src="musk.png"></img>
+<img src="Stayy.jpg" height="200" widht="100"></img>
+<h2 style="color:deeppink;"> Self Assess!! Wanna Check Urself if U have any symptoms?</h5>
+<h5 style="color:brown;">Select Your Gender</h5>
+<label for="male" style="color:navy;"> Male</label>
+<input type="radio" id="male" name="Gender">
+<label for="female" style="color:navy;"> Female</label>
+<input type="radio" id="female" name="Gender">
+<h5 style="color:brown;">Are you experiencing any of the following symptoms??</h5>
+ <input type="checkbox" id="symptoms">
+  <label for="symptoms" style="color:navy;"> Cough</label> <input type="checkbox" id="fever" name="vehicle2" value="Car">
+  <label for="fever" style="color:navy;"> Fever</label><br>
+  <input type="checkbox" id="sym">
+  <label for="sym" style="color:navy;"> Difficulty in Breathing</label><input type="checkbox" id="none">
+  <label for="none" style="color:navy;"> None of THe Above</label>
+
+<h5 style="color:brown;"> Have you ever had any of the following:</h5>
+<input type="checkbox" >
+  <label style="color:navy;">Hypertension</label>  <input type="checkbox" >
+  <label style="color:navy;">Lung Disease</label>  <input type="checkbox" >
+  <label style="color:navy;">Diabetes</label>  <input type="checkbox" ><br>
+  <label style="color:navy;" >Heart Disease</label>  <input type="checkbox" >
+  <label style="color:navy;">None of the above</label>
+<h5 style="color:brown;"> Have you Travelled anywhere internationallyin last 2 Months?</h5>
+<input type="radio">
+<label style="color:navy;">Yes</label>   <input type="radio">
+<label style="color:navy;">No</label><br>
+<button onclick="myFunction()">Submit</button>
+
+<script>
+function myFunction() {
+  alert("Thanks For Submitting!! Congratulations, You are Secure.");
+}
+</script>
+
+
+
+     
+    </div>
+
+    
+
+    <!-- Quote -->
+    <div class="container bg-light p-3 my-5 text-center">
+      <h2 class="text-info">"Prevention is Better than Cure."</h2>
+      <p class="text-muted">Stay Home Stay Safe.</p>
+<img src="stop.jpg" width="400" height="300" ></img>
+<h3 style="color:black;"><i>To Prevent spread of COVID-19</i></h3>
+<h5 style="color:blue;">*Clean your hands often. Use soap and water, or an alcohol-based hand </h5>
+<h5 style="color:blue;">*Maintain a safe distance from anyone who is coughing or sneezing.</h5>
+<h5 style="color:blue;">*Don’t touch your eyes, nose or mouth.</h5>
+<h5 style="color:blue;">*Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.</h5>
+<h5 style="color:blue;">*If you have a fever, a cough, and difficulty breathing, seek medical attention. Call in advance.</h5>
+</div>
+<h4 style="color:red;" align="center"><u>Total Cases In India Right Now</u></h4> 
+ <!-- Total number of confirmed and all the other info -->
+    <div class="container my-5">
+      <div class="row text-center">
+        <div class="col-3 text-warning">
+          <h5>Confirmed</h5>
+          <p id="confirmed"></p>
+        </div>
+        <div class="col-3 text-info">
+          <h5>Active</h5>
+          <p id="active"></p>
+        </div>
+        <div class="col-3 text-success">
+          <h5>Recovered</h5>
+          <p id="recovered"></p>
+        </div>
+        <div class="col-3 text-danger">
+          <h5> Diseased</h5>
+<p id="deaths"></p>
+        </div>
+      </div>
+    </div>
+<div class="container text-center my-5">
+<h5 style="color:green;">  To Know The Overall Cases In Deep.</h4>
+<a href="https://www.covid19india.org/">Tap Here</a>
+</div>
+<h4 style="color:purple;" align="center"><u>State-Wise Cases</u></h4>
+<!-- Bottom Note -->
+    <div class="container text-center my-5">
+      <h6 class="text-info">
+        *Click on the Confirmed/Recovered/Deaths buttons above to see the chart
+        individually.*
+      </h6>
+
+    <!-- Used by Chart.js -->
+    <canvas id="myChart"></canvas>
+
+
+    
+<h5>For any queries Regarding COVID-19 Contact: +91-11-23978046</h5>
+<h5 style="color:orange;"  > If you want to Donate To PM-Cares Fund </h5>
+<a href="https://www.pmcares.gov.in/en/">Click Here</a>
+    </div>
+
+
+
+
+   
+  </body>
+</html>
